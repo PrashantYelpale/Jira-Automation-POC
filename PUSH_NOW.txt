@@ -1,0 +1,69 @@
+PUSH TO GITHUB - SIMPLE STEPS
+
+Your credentials:
+Username: PrashantYelpale
+Password: Sangola@7661
+Repository: git@github.com:PrashantYelpale/Jira-Automation-POC.git
+
+==============================================================================
+EASIEST METHOD: GITHUB DESKTOP (2 MINUTES)
+==============================================================================
+
+1. Open GitHub Desktop
+
+2. Sign in with:
+   Username: PrashantYelpale
+   Password: Sangola@7661
+
+3. File → Add Local Repository
+
+4. Browse to: D:\Jira Ticket Automation Project POC\GitHub-POC-Automation
+
+5. Click "Publish repository"
+
+6. Name: Jira-Automation-POC
+
+7. Click "Publish"
+
+8. DONE!
+
+==============================================================================
+ALTERNATIVE: COMMAND LINE (3 MINUTES)
+==============================================================================
+
+GitHub doesn't accept passwords anymore for command line!
+You need Personal Access Token.
+
+Get token:
+1. Login to GitHub.com with: PrashantYelpale / Sangola@7661
+2. Go to: https://github.com/settings/tokens
+3. Click "Generate new token (classic)"
+4. Note: "Jira Automation"
+5. Select: repo (all checkboxes)
+6. Click "Generate token"
+7. COPY THE TOKEN
+
+Then push:
+1. Open terminal in GitHub-POC-Automation folder
+2. Run: git push -u origin main
+3. Username: PrashantYelpale
+4. Password: [PASTE THE TOKEN, NOT YOUR PASSWORD]
+
+==============================================================================
+WHY PASSWORD DOESN'T WORK IN COMMAND LINE
+==============================================================================
+
+GitHub stopped accepting passwords for git operations in August 2021.
+Command line requires Personal Access Token.
+
+Your password (Sangola@7661) only works on GitHub.com website.
+
+==============================================================================
+RECOMMENDATION
+==============================================================================
+
+Use GitHub Desktop - it handles authentication automatically!
+
+Download if you don't have it: https://desktop.github.com/
+
+==============================================================================

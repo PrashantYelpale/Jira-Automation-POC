@@ -1,0 +1,199 @@
+COMPLETE SETUP GUIDE - DO THESE 3 STEPS
+
+All code is ready! Just need to push and configure.
+
+==============================================================================
+STEP 1: PUSH TO GITHUB (2 minutes)
+==============================================================================
+
+Method A: GitHub Desktop (EASIEST)
+
+1. Open GitHub Desktop
+2. File → Add Local Repository
+3. Browse to: D:\Jira Ticket Automation Project POC\GitHub-POC-Automation
+4. Click "Add Repository"
+5. Click "Publish repository" (top right blue button)
+6. Repository name: Jira-Automation-POC
+7. Keep this code private: CHECK THIS BOX
+8. Click "Publish repository"
+9. DONE!
+
+Method B: Command Line with Token
+
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Note: "Jira Automation"
+4. Select scope: repo (check all boxes under repo)
+5. Click "Generate token"
+6. COPY THE TOKEN (save it somewhere)
+
+7. Open terminal in GitHub-POC-Automation folder
+8. Run: git push -u origin main
+9. Username: prashantyelpale63@gmail.com
+10. Password: PASTE THE TOKEN (not your password!)
+11. DONE!
+
+==============================================================================
+STEP 2: ADD SECRETS (3 minutes)
+==============================================================================
+
+1. Go to: https://github.com/PrashantYelpale/Jira-Automation-POC
+
+2. Click "Settings" (top menu)
+
+3. Click "Secrets and variables" → "Actions" (left sidebar)
+
+4. Click "New repository secret" (green button)
+
+5. Add Secret 1:
+   Name: JIRA_API_TOKEN
+   Value: [YOUR_JIRA_API_TOKEN_HERE]
+   Click "Add secret"
+
+6. Add Secret 2:
+   Name: JIRA_EMAIL
+   Value: prashantyelpale63@gmail.com
+   Click "Add secret"
+
+7. Add Secret 3:
+   Name: JIRA_SERVER
+   Value: https://prashantyelpale63.atlassian.net
+   Click "Add secret"
+
+8. Add Secret 4:
+   Name: JIRA_PROJECT_KEY
+   Value: SCRUM
+   Click "Add secret"
+
+9. DONE! You should see 4 secrets listed.
+
+==============================================================================
+STEP 3: ENABLE AND TEST (2 minutes)
+==============================================================================
+
+1. Go to: https://github.com/PrashantYelpale/Jira-Automation-POC
+
+2. Click "Actions" tab (top menu)
+
+3. If you see "Workflows aren't being run on this repository"
+   Click "I understand my workflows, go ahead and enable them"
+
+4. You should see "Daily Jira Automation POC" in the left sidebar
+
+5. Click on "Daily Jira Automation POC"
+
+6. Click "Run workflow" button (right side)
+
+7. Click green "Run workflow" button in the dropdown
+
+8. Wait 1-2 minutes
+
+9. Refresh the page
+
+10. You should see a yellow dot (running) or green checkmark (success)
+
+11. Click on the workflow run to see details
+
+12. If green checkmark: SUCCESS!
+
+13. If red X: Click to see error logs
+
+==============================================================================
+STEP 4: VERIFY IN JIRA (1 minute)
+==============================================================================
+
+1. Go to: https://prashantyelpale63.atlassian.net/jira/software/projects/SCRUM/boards/1
+
+2. Check for:
+   - Some tickets marked as "Done"
+   - New tickets in backlog
+   - Tickets assigned to developers
+   - Comments on tickets explaining assignments
+
+3. If you see these: POC SUCCESS!
+
+==============================================================================
+WHAT HAPPENS NEXT
+==============================================================================
+
+After successful setup:
+
+1. Automation runs automatically every day at 9 AM CET
+
+2. Each day it will:
+   - Complete 3-5 tickets per developer
+   - Add 5 new tickets to backlog
+   - Assign unassigned tickets
+   - Handle priority overrides
+
+3. You can monitor in:
+   - GitHub Actions tab (see runs)
+   - Jira board (see results)
+
+4. After 1 week:
+   - 7 successful runs
+   - 21-35 tickets completed
+   - 35 new tickets added
+   - All assigned intelligently
+   - PROOF IT WORKS!
+
+5. Show to team:
+   - Demo the automation
+   - Show GitHub Actions logs
+   - Show Jira assignments
+   - Get approval for production
+
+==============================================================================
+TROUBLESHOOTING
+==============================================================================
+
+Issue: Can't push to GitHub
+Solution: Use GitHub Desktop (easiest) or generate Personal Access Token
+
+Issue: Secrets page not found
+Solution: Make sure repository is created first (Step 1)
+
+Issue: Workflow not running
+Solution: Check if all 4 secrets are added correctly
+
+Issue: Workflow failed (red X)
+Solution: Click on the run, check logs, verify secrets are correct
+
+Issue: No tickets in Jira
+Solution: Verify JIRA_PROJECT_KEY is "SCRUM"
+
+==============================================================================
+SUPPORT
+==============================================================================
+
+If stuck:
+1. Check error messages in GitHub Actions logs
+2. Verify all secrets are added correctly
+3. Check Jira credentials are valid
+4. Try running workflow manually again
+
+==============================================================================
+SUMMARY
+==============================================================================
+
+Total Time: 7 minutes
+Total Cost: $0 (FREE)
+
+Steps:
+1. Push to GitHub (2 min)
+2. Add 4 secrets (3 min)
+3. Enable and test (2 min)
+
+Result:
+- Fully automated daily POC
+- Runs every day at 9 AM
+- Proves automation works
+- Ready to show team!
+
+==============================================================================
+
+GOOD LUCK! YOU'RE ALMOST THERE! 🚀
+
+Just 3 simple steps and your POC will be running!
+
+==============================================================================

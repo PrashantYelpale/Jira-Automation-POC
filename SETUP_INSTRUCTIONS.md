@@ -21,7 +21,7 @@ Step 2: Add GitHub Secrets (3 minutes)
 
    Secret 1:
    Name: JIRA_API_TOKEN
-   Value: ATATT3xFfGF0KMkxmIyB7nhkwfiui2WPxjL6hwydeLkwQjQjoaE0m3PnvnNIEzhN_wQvYXzBxhnQLxFdaWNCcG71AwBbbTTrgNihvipqEfPT00dU2Dj7ECol2yNZnA_8SzJ2JvgkXpAEtT-_UhoBzQ2l38dcC3TlAtRLjAoxNEKIz4JYJYZf-lw=880FD2F2
+   Value: [YOUR_JIRA_API_TOKEN_HERE]
 
    Secret 2:
    Name: JIRA_EMAIL

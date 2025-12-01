@@ -1,0 +1,98 @@
+EASIEST WAY TO PUSH TO GITHUB
+
+==============================================================================
+OPTION 1: DOUBLE-CLICK THE BATCH FILE (EASIEST!)
+==============================================================================
+
+1. Find file: push_to_github.bat (in this folder)
+2. Double-click it
+3. When prompted, enter:
+   Username: prashantyelpale63@gmail.com
+   Password: [Your GitHub Personal Access Token]
+
+Note: GitHub doesn't accept regular passwords anymore!
+You MUST use Personal Access Token.
+
+How to get token:
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Select: repo (all checkboxes)
+4. Click "Generate token"
+5. COPY the token
+6. Use this as password
+
+==============================================================================
+OPTION 2: USE GITHUB DESKTOP (SUPER EASY!)
+==============================================================================
+
+1. Download GitHub Desktop if you don't have it:
+   https://desktop.github.com/
+
+2. Open GitHub Desktop
+
+3. File → Add Local Repository
+
+4. Browse to: D:\Jira Ticket Automation Project POC\GitHub-POC-Automation
+
+5. Click "Add Repository"
+
+6. Click "Publish repository" (top right)
+
+7. Name: Jira-Automation-POC
+
+8. Keep private: CHECK THIS
+
+9. Click "Publish repository"
+
+10. DONE! No password needed if you're logged in!
+
+==============================================================================
+OPTION 3: COMMAND LINE WITH TOKEN
+==============================================================================
+
+1. Get Personal Access Token (see above)
+
+2. Open terminal in this folder
+
+3. Run: git push -u origin main
+
+4. Enter:
+   Username: prashantyelpale63@gmail.com
+   Password: [paste your token]
+
+5. Done!
+
+==============================================================================
+WHY YOUR PASSWORD DOESN'T WORK
+==============================================================================
+
+GitHub stopped accepting passwords in August 2021.
+You MUST use Personal Access Token for command line operations.
+
+Regular password only works on GitHub.com website.
+
+==============================================================================
+RECOMMENDATION
+==============================================================================
+
+Use GitHub Desktop - it's the easiest!
+- No tokens needed
+- No command line
+- Just click buttons
+- Takes 2 minutes
+
+Download: https://desktop.github.com/
+
+==============================================================================
+AFTER PUSHING
+==============================================================================
+
+Once code is on GitHub:
+
+1. Add secrets (see COMPLETE_SETUP_GUIDE.txt)
+2. Enable Actions
+3. Run workflow
+4. Check Jira
+5. POC SUCCESS!
+
+==============================================================================
