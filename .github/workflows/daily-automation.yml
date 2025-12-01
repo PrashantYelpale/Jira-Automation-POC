@@ -1,0 +1,47 @@
+name: Daily Jira Automation POC
+
+on:
+  # Run daily at 9 AM CET (7 AM UTC in winter)
+  schedule:
+    - cron: '0 7 * * *'
+  
+  # Manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  automate-jira:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install jira python-dotenv
+    
+    - name: Run Daily Automation
+      env:
+        JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+        JIRA_SERVER: ${{ secrets.JIRA_SERVER }}
+        JIRA_PROJECT_KEY: ${{ secrets.JIRA_PROJECT_KEY }}
+      run: |
+        echo "🚀 Starting Daily Automation..."
+        echo "Time: $(date)"
+        python daily_automation.py
+        echo "✅ Automation completed!"
+    
+    - name: Upload logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: automation-logs
+        path: "*.log"
+        retention-days: 30
