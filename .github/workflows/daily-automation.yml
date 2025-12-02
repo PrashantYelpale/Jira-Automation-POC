@@ -45,3 +45,4 @@ jobs:
         name: automation-logs
         path: "*.log"
         retention-days: 30
+        if-no-files-found: ignore
