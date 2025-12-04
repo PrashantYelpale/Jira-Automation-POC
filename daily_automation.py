@@ -91,8 +91,12 @@ class DailyAutomation:
             jql = f'project = {PROJECT_KEY} AND assignee = "{member["account_id"]}" AND status IN ("To Do", "In Progress")'
             tickets = self.jira.search_issues(jql, maxResults=5)
             
-            # Complete 3-5 tickets randomly
-            num_to_complete = random.randint(3, min(5, len(tickets)))
+            # Complete 3-5 tickets randomly (but not more than available)
+            if len(tickets) == 0:
+                logger.info(f"\n👤 {member['name']}: No tickets to complete")
+                continue
+            
+            num_to_complete = min(random.randint(3, 5), len(tickets))
             
             logger.info(f"\n👤 {member['name']}: Completing {num_to_complete} tickets")
             
